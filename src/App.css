@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Antique&display=swap');
 *{
-  font-family: 'Inter';
+  /* font-family: 'Inter'; */
 }
 .App {
   display: flex;
@@ -310,6 +310,9 @@ html, body {
 
 
 @media (max-width: 850px) {
+  .keyboard{
+    width: 100%;
+  }
   .App {
     padding: 10px 5px;
   }
@@ -318,6 +321,7 @@ html, body {
     max-width: 100%;
     width: 95vw;
     padding: 0.5rem;
+    margin-top: 2rem;
   }
 
   .row {
@@ -330,7 +334,7 @@ html, body {
   }
 
   .keyboard {
-    margin-top: 30px;
+    margin-top: 0;
     padding: 0.5rem;
   }
 
@@ -339,8 +343,8 @@ html, body {
   }
 
   .key {
-    min-width: 50px;
-    min-height: 50px;
+    min-width: 60px;
+    min-height: 60px;
     padding: 8px 6px;
     font-size: 1.2rem;
   }
@@ -397,7 +401,7 @@ html, body {
 }
 @media (max-width: 850px) {
   .settings > button {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
