@@ -335,7 +335,7 @@ function App() {
       
       <span className='gameModeText'>
           {language === 'pl'
-            ? `Tryb gry: ${gameMode === 'daily' ? 'Codzienny' : 'Dowolny'}`
+            ? `Tryb gry: ${gameMode === 'daily' ? 'Codzienny' : 'Swobodny'}`
             : `Game mode: ${gameMode === 'daily' ? 'Daily' : 'Play freely'}`
           }
         </span>
