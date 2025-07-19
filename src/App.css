@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zen+Antique&display=swap');
 *{
-  /* font-family: 'Inter'; */
+  font-family: 'Inter';
 }
 .App {
   display: flex;
@@ -399,6 +399,18 @@ html, body {
     display: none;
   }
 }
+@media (max-width: 867px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .box {
+    padding: 15px;
+  }
+}
+
 @media (max-width: 850px) {
   .settings > button {
     font-size: 0.7rem;
@@ -407,10 +419,37 @@ html, body {
 
 @media (max-width: 600px) {
   .key {
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 50px;
+    min-height: 50px;
     font-size: 1rem;
     padding: 6px 4px;
+  }
+}
+
+@media (max-width: 550px) {
+  .key {
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 0.95rem;
+    padding: 5px 4px;
+  }
+}
+
+@media (max-width: 545px) {
+  .key {
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 1rem;
+    padding: 6px 4px;
+  }
+}
+
+@media (max-width: 500px) {
+  .key {
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 0.9rem;
+    padding: 5px 3px;
   }
 }
 
@@ -437,7 +476,15 @@ html, body {
     height: 1.6rem;
     padding: 0.1rem 0.4rem;
   }
+}
 
+@media (max-width: 450px) {
+  .key {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 0.85rem;
+    padding: 4px 3px;
+  }
 }
 
 @media (max-width: 440px) {
@@ -449,14 +496,29 @@ html, body {
   }
 }
 
-@media (max-width: 867px) {
-  .container {
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
+@media (max-width: 400px) {
+  .key {
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 0.8rem;
+    padding: 4px 2px;
   }
+}
 
-  .box {
-    padding: 15px;
+@media (max-width: 350px) {
+  .key {
+    min-width: 28px;
+    min-height: 28px;
+    font-size: 0.75rem;
+    padding: 3px 2px;
+  }
+}
+
+@media (max-width: 300px) {
+  .key {
+    min-width: 24px;
+    min-height: 24px;
+    font-size: 0.7rem;
+    padding: 2px 2px;
   }
 }
