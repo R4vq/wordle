@@ -15,6 +15,7 @@ const initBoardData = () => ({
 });
 
 function App() {
+  const [invalidRow, setInvalidRow] = useState(null);
   const [showSettings, setShowSettings] = useState(false);
   const [gameMode, setGameMode] = useState('daily');
   const [language, setLanguage] = useState('pl');
@@ -75,7 +76,10 @@ function App() {
       return lines[Math.floor(Math.random() * lines.length)];
     }
   };
-
+    const triggerInvalidRow = (rowIndex) => {
+    setInvalidRow(rowIndex);
+    setTimeout(() => setInvalidRow(null), 500); 
+  };
   const handleKeyPress = (key) => {
     const current = boards[gameMode][language];
     if (isWon[gameMode][language] || current.currentRow >= 6) return;
@@ -97,6 +101,9 @@ function App() {
         const word = newBoard[currentRow].join('').toLowerCase();
         if (wordLists[language].includes(word)) {
           wordCheck(word, currentRow, newBoard, statuses, usedLetters);
+        }
+        else{
+          triggerInvalidRow(currentRow)
         }
       }
     } else if (letterRegex.test(key)) {
@@ -340,7 +347,7 @@ function App() {
           }
         </span>
 
-      <Board board={current.board} statuses={current.statuses} />
+      <Board board={current.board} statuses={current.statuses} invalidRow={invalidRow} />
       
       <Keyboard
         onKeyPress={handleKeyPress}

@@ -105,9 +105,17 @@ html, body {
   80% { transform: translateX(10px); }
   100% { transform: translateX(0); }
 }
+@keyframes flashRed {
+  0% { background-color: transparent; }
+  50% { background-color: rgba(255, 0, 0, 0.5); }
+  100% { background-color: transparent; }
+}
 
+.tile.invalid {
+  animation: flashRed 0.5s ease;
+}
 .keyboard {
-  margin-top: 16px; /* usunięte podwójne margin-top */
+  margin-top: 16px; 
   padding: 1rem;
   display: flex;
   flex-direction: column;

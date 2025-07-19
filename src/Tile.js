@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export default function Tile({ letter, status }) {
+export default function Tile({ letter, status,className }) {
   const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function Tile({ letter, status }) {
   }, [status]);
 
   return (
-    <div className={`tile ${status} ${flipped ? "flip" : ""}`}>
+    <div className={`tile ${status} ${flipped ? "flip" : ""} ${className}`}>
       {letter}
     </div>
   );
