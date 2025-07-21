@@ -399,6 +399,12 @@ html, body {
     display: none;
   }
 }
+#flag{
+  transition: all ease-in-out;
+}
+#flag :hover{
+  scale: 110%;
+}
 @media (max-width: 867px) {
   .container {
     flex-direction: column;
